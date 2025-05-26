@@ -522,7 +522,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "F:\\nextjs\\cmsnext_dashboard\\generated\\prisma",
+      "value": "/workspaces/cmsnext_dashboard/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -531,17 +531,16 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "debian-openssl-1.1.x",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "F:\\nextjs\\cmsnext_dashboard\\prisma\\schema.prisma",
+    "sourceFilePath": "/workspaces/cmsnext_dashboard/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../prisma",
   "clientVersion": "6.6.0",
@@ -550,11 +549,12 @@ const config = {
     "db"
   ],
   "activeProvider": "mysql",
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "mysql://root@localhost:3306/ecommerce"
+        "value": null
       }
     }
   },

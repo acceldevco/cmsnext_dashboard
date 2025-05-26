@@ -1,0 +1,76 @@
+/* استایل‌های سفارشی برای قابلیت اسکرول اسنپ */
+
+/* استایل اسکرول‌بار برای مرورگرهای مبتنی بر وبکیت */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* پنهان کردن اسکرول‌بار در مرورگرهای مختلف اما حفظ عملکرد اسکرول */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* برای اینترنت اکسپلورر و اج */
+  scrollbar-width: none;  /* برای فایرفاکس */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* برای کروم، سافاری و اپرا */
+}
+
+/* استایل‌های اضافی برای اسکرول اسنپ */
+.snap-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+/* بهبود تجربه کاربری در موبایل */
+@media (max-width: 640px) {
+  .snap-x {
+    padding-bottom: 12px;
+  }
+  
+  /* کارت‌های کوچکتر در موبایل */
+  .featured-products-list .snap-start {
+    width: 85vw !important;
+    max-width: 300px;
+  }
+}
+
+/* تنظیمات برای تبلت */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .featured-products-list .snap-start {
+    width: 45vw !important;
+    max-width: 350px;
+  }
+}
+
+/* انیمیشن اسکرول نرم */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* استایل دکمه‌های ناوبری */
+.featured-products-list .nav-button {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.featured-products-list .nav-button:hover {
+  opacity: 1;
+}
